@@ -6,47 +6,58 @@ Welcome to TodoApp, a meticulously crafted with Django rest framework and  react
 
 ---
 
+<div align="center">  
+<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 20px" src="https://github.com/pc7122/TodoApp-React-Django/assets/55906078/de0dd9d6-02ce-4f54-973e-a751dea98f6b" alt="Tailwind CSS" height="50" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 20px" src="https://github.com/pc7122/TodoApp-React-Django/assets/55906078/cbe36d8e-45a5-483d-9006-8f81290a513f" alt="JavaScript" height="50" /></a>  
+<a href="https://www.java.com/" target="_blank"><img style="margin: 20px" src="https://github.com/pc7122/TodoApp-React-Django/assets/55906078/d3ad34a3-cb85-4ba8-b807-cb6fbb3342ab" alt="React JS" height="50" /></a>  
+<a href="https://www.python.org/" target="_blank"><img style="margin: 20px" src="https://github.com/pc7122/TodoApp-React-Django/assets/55906078/91c52809-5960-4a29-b705-b0a1b082d3f5" alt="Python" height="50" /></a>  
+<a href="https://www.djangoproject.com/" target="_blank"><img style="margin: 20px" src="https://github.com/pc7122/TodoApp-React-Django/assets/55906078/59d9193a-47bc-411a-91ef-d1dfb7f86479" alt="Django" height="50" /></a>  
+<a href="https://github.com/" target="_blank"><img style="margin: 20px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+</div>
+
+---
+
 ### Installation and Setup
 
 Create a virtual environment
 
-```bash
+```python
   python -m venv venv
 ```
 
 Install dependencies
 
-```bash
+```python
   pip install -r requirements.txt
 ```
 
 Make Migrations
 
-```bash
+```python
   python manage.py makemigrations
 ```
 
 Migrate changes to database
 
-```bash
+```python
   python manage.py migrate
 ```
 
 Create a super user
 
-```bash
+```python
   python manage.py createsuperuser
 ```
 
 Run Server
 
-```bash
+```python
   python manage.py runserver
 ```
 
 Email Configuration in .env file
 
-```bash
+```python
   HOST_EMAIL = "<YOUR_EMAIL>"
   HOST_PASSWORD = "<YOUR_PASSWORD>"
 ```
