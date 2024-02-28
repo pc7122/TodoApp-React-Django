@@ -34,6 +34,34 @@ class CustomUserSerializer(serializers.ModelSerializer):
         )
 
         user.set_password(validated_data['password'])
-        user.save()
 
+        try:
+            user.send_verification_email()
+        except Exception as e:
+            user.delete()
+            raise serializers.ValidationError(
+                {"email": "Couldn't send verification email. Please try again later."})
+
+        user.save()
         return user
+
+
+class PasswordResetSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True, validators=[
+
+    ])
+    OTP = serializers.CharField(required=True)
+    password = serializers.CharField(
+        required=True, validators=[validate_password])
+    confirm_password = serializers.CharField(required=True)
+
+    class Meta:
+        model = CustomUser
+        fields = ('email', 'OTP', 'password', 'confirm_password')
+
+    def validate(self, attrs):
+        if attrs['password'] != attrs['confirm_password']:
+            raise serializers.ValidationError(
+                {"confirm_password": "Password fields didn't match."})
+
+        return attrs
