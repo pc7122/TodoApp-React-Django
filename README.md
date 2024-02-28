@@ -1,6 +1,6 @@
 # TodoApp - React and Django
 
-<p style="text-align: justify">
+<p align="justify">
 Welcome to TodoApp, a meticulously crafted with Django rest framework and  react JS todo web application that combines robust security features including email verification, OTP authentication, and password hashing, with a clean and efficient codebase. Experience seamless task management in a protected environment, where your data's security is paramount, and your productivity is optimized. TaskGuard: Where organization meets peace of mind.
 </p>
 
